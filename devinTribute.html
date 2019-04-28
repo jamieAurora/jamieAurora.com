@@ -1,0 +1,286 @@
+<!-- Hi there, FCC people! Hope you're having a nice day :3 -->
+<!--
+- Add Favicon
+- Add responsiveness using media queries\
+- Font Awesome
+-->
+<style>
+  html,
+  body {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  nav
+  {
+  }
+  nav ul {
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: -5px;
+    margin-bottom: 13px;
+    margin-top: 15px;
+  }
+
+  nav ul li a {
+    color: #f2f2f2;
+    padding: 14px 15px;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    color: black;
+    background-color: #ddd;
+  }
+
+  /* Add a color to the active/current link */
+  .navbar a.active {
+    background-color: red;
+    color: red;
+  }
+  .active
+  {
+    background-color: #86C232;
+    color: white;
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+  .welcome-section
+  {
+    background-color: #222629;
+    font-family: Oswald;
+    letter-spacing: 4px;
+    top: 0;
+    min-height: 55vh;
+    padding-top: 45vh;
+  }
+
+  .tile:hover
+  {
+    opacity: 0.75;
+  }
+  .contact
+  {
+    font-size: 12px;
+    background: #222629;
+  }
+  .projects
+  {
+    background: #474B4F;
+  }
+  .footer
+  {
+    background: #6B6E70;
+    height: 250px;
+  }
+  .footer h1
+  {
+    font-size: 20px;
+    padding-top: 20px;
+    font-family: Oswald;
+    color: #86C232;
+  }
+  h1
+  {
+    font-size: 40px;
+  }
+  h2
+  {
+    font-family: Oswald;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    font-size: 30px;
+
+
+  }
+  h3
+  {
+    background: #a4b7d4;
+  }
+  .project-title
+  {
+    padding-top: 260px;
+    font-size: 16px;
+    color: #86C232;
+    font-weight: bold;
+    decoration: none;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  .profile-link:hover
+  {
+    opacity: 0.75;
+  }
+
+  hr
+  {
+    padding-top: 0px;
+
+  }
+
+
+  /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(black, 0.5);
+
+  /*backface-visibility: hidden;*/
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+}
+
+/* Style the back side */
+.flip-box-back {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+
+  transform: rotateY(180deg);
+  background-color: rgba(black, 0.5);
+
+}
+.responsive
+{
+  width: 100%;
+  height: auto;
+  max-width: 400
+}
+
+  </style>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<body>
+<nav>
+<ul id='navbar'>
+<li><a class = "active" href="index.html">Home</a></li>
+</ul>
+</nav>
+<section class="welcome-section" id = "welcome-section">
+<div class = "container-fluid">
+<div class = "row">
+  <div class="col-xs-2">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="images/HAARHT.jpg" alt="Heavy as a Really Heavy Thing" style="width:250px;height:250px" class="responsive">
+        </div>
+        <div class="flip-box-back">
+          <h2>Heavy As A Really Heavy Thing</h2>
+          <p>April 1995</p>
+        </div>
+      </div>
+    </div></div>
+  <div class="col-xs-2">  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="images/city.jpg" alt="City" style="width:250px;height:250px"  class="responsive">
+        </div>
+        <div class="flip-box-back">
+          <h2>City</h2>
+          <p>February 1997</p>
+        </div>
+      </div>
+    </div></div>
+  <div class="col-xs-2">  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="images/oceanmachine.jpg" alt="Ocean Machine" style="width:250px;height:250px"  class="responsive">
+        </div>
+        <div class="flip-box-back">
+          <h2>Ocean Machine</h2>
+          <p>1997</p>
+        </div>
+      </div>
+    </div></div>
+  <div class="col-xs-2"><div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="images/infinity.jpg" alt="Infinity" style="width:250px;height:250px"  class="responsive">
+      </div>
+      <div class="flip-box-back">
+        <h2>Infinity</h2>
+        <p>October 1998</p>
+      </div>
+    </div>
+  </div></div>
+  <div class="col-xs-2">  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="images/physicist.jpg" alt="Physicist" style="width:250px;height:250px"  class="responsive">
+        </div>
+        <div class="flip-box-back">
+          <h2>Physicist</h2>
+          <p>June 2000</p>
+        </div>
+      </div>
+    </div></div>
+  <div class="col-xs-2">  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img src="images/terria.jpg" alt="Terria" style="width:250px;height:250px"  class="responsive">
+        </div>
+        <div class="flip-box-back">
+          <h2>Terria</h2>
+          <p>November 2001</p>
+        </div>
+      </div>
+    </div></div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+</section>
+
+
+</body>
